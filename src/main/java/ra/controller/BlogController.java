@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import ra.model.enttity.Blog;
 import ra.model.service.IBlogService;
-
 import java.util.List;
 
 
@@ -50,5 +49,4 @@ public class BlogController {
         blogService.save(b);
         return "redirect:/";
     }
-
 }

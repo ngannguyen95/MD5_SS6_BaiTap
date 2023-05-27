@@ -22,8 +22,12 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import ra.model.repository.BlogRepositoryIpm;
 import ra.model.repository.IBlogRepository;
+import ra.model.repository.IPictureRepository;
+import ra.model.repository.PictureRepositoryIpm;
 import ra.model.service.BlogServiceIpm;
 import ra.model.service.IBlogService;
+import ra.model.service.IPictureService;
+import ra.model.service.PictureServiceIpm;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -122,5 +126,15 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public IBlogService blogService() {
         return new BlogServiceIpm();
     }
+    @Bean
+    public IPictureRepository pictureRepository() {
+        return new PictureRepositoryIpm();
+    }
+
+    @Bean
+    public IPictureService pictureService() {
+        return new PictureServiceIpm();
+    }
+
 
 }

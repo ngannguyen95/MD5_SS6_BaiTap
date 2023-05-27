@@ -38,7 +38,6 @@ public class BlogRepositoryIpm implements IBlogRepository{
         }else {
             em.persist(blog);
         }
-
     }
 
     @Override
